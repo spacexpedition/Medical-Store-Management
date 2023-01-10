@@ -103,7 +103,7 @@ def new_account():
     print(x)
     cursor.execute(x)
     connect.commit()
-    print("Account created successfully")
+    print("Customer Account Created Successful")
     I = ("select*from customers_details")
     cursor.execute(I)
     J = cursor.fetchall()
@@ -131,9 +131,8 @@ def existing_account():
             customer_account()
     else:
         print("your account exists")
-        print("Account created successfully")
         K = ("select*from customers_details")
-        cursor.execute(K)+3
+        cursor.execute(K)
         L = cursor.fetchall()
         for row in L:
             print(row)
@@ -176,7 +175,6 @@ def new_medicines():
         cursor.execute(e)
         connect.commit()
         print("Medicines Added in Stock")
-        print("Account created successfully")
         M = ("select*from medicine_details")
         cursor.execute(M)
         N = cursor.fetchall()
@@ -197,7 +195,6 @@ def stock_medicine():
         medicine_management()
     else:
         print("In Stock")
-        print("Account created successfully")
         O = ("select*from medicine_details")
         cursor.execute(O)
         P = cursor.fetchall()
@@ -245,7 +242,6 @@ def customer_bill():
             cursor.execute(v_sql_insert)
             connect.commit()
             print("Bill Generated")
-            print("Account created successfully")
             Q = ("select*from patient_bill")
             cursor.execute(Q)
             R = cursor.fetchall()
@@ -273,7 +269,6 @@ if Action == 1:
         cursor.execute(A)
         connect.commit()
         print("Users Added Successfully")
-        print("Account created successfully")
         S = ("select*from account_details")
         cursor.execute(S)
         T = cursor.fetchall()
