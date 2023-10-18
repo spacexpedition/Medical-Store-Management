@@ -4,7 +4,7 @@ import mysql.connector as sql
 connect = sql.Connect(
     host='localhost',
     user='root',
-    password='Q1w2e3r4t5y6u7@',
+    password='Q1w2e3r4t5y6u7@',  # enter your sql password#
     database='medical_store_record')
 if connect.is_connected:
     print("successfully connected")
